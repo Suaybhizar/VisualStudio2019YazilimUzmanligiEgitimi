@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfDataGridPratics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDataGridPratics"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="538.584">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="gridStudent" AutoGenerateColumns="False" 
+                  MinRowHeight="30" CanUserAddRows="False">
+
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="TextBlock.HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn.CellTemplate>
+    
+                        <ItemContainerTemplate>
+
+                            <TextBlock Text="{Binding StudentId}" Foreground="Red"
+                                       Background="White"/>
+
+                        </ItemContainerTemplate>
+
+                    </DataGridTemplateColumn.CellTemplate>
+
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <ItemContainerTemplate>
+                            <TextBox Text="{Binding StudentId}" Background="Green"
+                                     HorizontalContentAlignment="Center"/>
+                        </ItemContainerTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Binding="{Binding StudentFullName}" Header="Student Full Name"/>
+                <DataGridTextColumn Binding="{Binding StudentDepartment}" Header="Student Department"/>
+                <DataGridTextColumn Binding="{Binding MidtermExams}" Header="Midterm Exams"/>
+                <DataGridTextColumn Binding="{Binding FinalExams}" Header="Final Exams"/>
+
+                <DataGridTemplateColumn Header="PassedorFaild">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <ItemContainerTemplate>
+                            <Border CornerRadius="5" VerticalAlignment="Stretch" 
+                                    HorizontalAlignment="Stretch"
+                                    Background="{Binding PassedorFaild}"
+                                    Margin="3"/>
+                        </ItemContainerTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="1" DataContext="{Binding ElementName=gridStudent,Path=SelectedItem}">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="2"/>
+                </Style>
+
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+                
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Student ID"/>
+            <TextBlock Text="Student Full Name" Grid.Row="1"/>
+            <TextBlock Text="Student Department" Grid.Row="2"/>
+            <TextBlock Text="Midterm Exams" Grid.Row="3"/>
+            <TextBlock Text="Final Exams" Grid.Row="4"/>
+            <TextBlock Text="Passed/Faild" Grid.Row="5"/>
+
+            <TextBox Grid.Column="1" Text="{Binding StudentId}"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding StudentFullName}"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding StudentDepartment}"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding MidtermExams}"/>
+            <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding FinalExams}"/>
+            <Border Grid.Column="2" Grid.Row="5" Background="{Binding PassedorFaild}"/>
+            
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>

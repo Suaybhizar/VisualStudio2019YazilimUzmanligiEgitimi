@@ -1,0 +1,201 @@
+﻿<Window x:Class="WpfArayuzTasarim_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfArayuzTasarim_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="730" Width="903.875" MinWidth="903.875" MinHeight="378">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button HorizontalContentAlignment="Stretch">
+                <DockPanel>
+                    <Image Source="/resimler/Close.jpg" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="1">
+                <DockPanel>
+                    <Image Source="/resimler/Login.png" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="2">
+                <DockPanel>
+                    <Image Source="/resimler/Password.png" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="3">
+                <DockPanel>
+                    <Image Source="/resimler/Username.png" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="4">
+                <DockPanel>
+                    <Image Source="/resimler/Close.jpg" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="5">
+                <DockPanel>
+                    <Image Source="/resimler/Close.jpg" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+            <Button HorizontalContentAlignment="Stretch" Grid.Column="6">
+                <DockPanel>
+                    <Image Source="/resimler/Password.png" DockPanel.Dock="Left" Margin="5"/>
+                    <TextBlock Text="Panel" VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                </DockPanel>
+
+            </Button>
+
+
+        </Grid>
+        <Border Background="White" CornerRadius="10" Grid.Column="1"
+                Grid.Row="1" Margin="5">
+            <WrapPanel Orientation="Vertical">
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <StackPanel>
+                        <TextBlock Text="Çalışan 1" Margin="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/resimler/Password.png" Width="150" Margin="3"/>
+                            <StackPanel>
+                                <TextBlock Text="Adres" Foreground="Gray"/>
+                                <TextBlock Text="Kullanıcının adresi Buraua gelecek"/>
+                                <TextBlock Text="Telefon"/>
+                                <TextBlock Text="05432662721"/>
+                                <TextBlock Text="Kuşşanıcı adresi"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+        </Border>
+
+
+
+
+
+    </Grid>
+</Window>

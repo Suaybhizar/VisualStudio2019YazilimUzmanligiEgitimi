@@ -1,0 +1,44 @@
+﻿<Window x:Class="LayoutKontrolleri.StackPanelKontrolu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LayoutKontrolleri"
+        mc:Ignorable="d"
+        Title="StackPanelKontrolu" Height="215.403" Width="358.531">
+    <!--<StackPanel Orientation="Horizontal">
+        <Button Content="1.Button" Width="80"/>
+        <Button Content="2.Button" Width="80"/>
+        <Button Content="3.Button"/>
+        <Button Content="4.Button"/>
+        <Button Content="5.Btton"/>
+        <Button Content="6.Button"/>
+        
+    </StackPanel>-->
+
+    <StackPanel>
+        <TextBlock Text="Eğitim Durumunuz" Margin="5"/>
+        <ComboBox Margin="5">
+            <ComboBoxItem >İlkokul</ComboBoxItem>
+            <ComboBoxItem >Ortaokul</ComboBoxItem>
+            <ComboBoxItem >Lise</ComboBoxItem>
+            <ComboBoxItem >Lisans</ComboBoxItem>
+            <ComboBoxItem >Yüksek Lisans</ComboBoxItem>
+        </ComboBox>
+        <!--<StackPanel Orientation="Horizontal" Margin="5" >
+            <TextBlock Text="Cinsiyetiniz" Margin="0,0,10,0"/>
+            <RadioButton Content="Erkek"/>
+            <RadioButton Content="Kadın"/>
+        </StackPanel>-->
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Cinsiyetiniz" Grid.Column="0"/>
+            <RadioButton Content="Erkek" Grid.Column="1"/>
+            <RadioButton Content="Kadın" Grid.Column="2"/>
+        </Grid>
+    </StackPanel>
+</Window>

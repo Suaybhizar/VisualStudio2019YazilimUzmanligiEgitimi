@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+
+<a href="/product/new" class="btn btn-warning">Yeni Ürün Ekle</a>
+
+<table class="table table-striped">
+    <tr>
+        <td>Id</td>
+        <td>Adi</td>
+        <td>Kategori</td>
+        <td>Fiyatı</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductID</td>
+            <td>@item.ProductName</td>
+            <td>@item.CategoryID</td>
+            <td>@item.UnitPrice</td>
+        </tr>
+    }
+</table>
+<hr/>
+
+

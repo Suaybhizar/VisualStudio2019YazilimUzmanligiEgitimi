@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using UzaktanEgitimMVC.MvcGiris.Models.Entity
+@model List<Product>
+
+@section styles
+{
+    <link rel="stylesheet" href="x.css" />
+}
+@section Scripts
+{
+    <script>
+        alert("deneme");
+    </script>
+}
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Adi</td>
+        <td>Kategori</td>
+        <td>Fiyatı</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductID</td>
+            <td>@item.ProductName</td>
+            <td>@item.CategoryID</td>
+            <td>@item.UnitPrice</td>
+        </tr>
+    }
+</table>
+
+

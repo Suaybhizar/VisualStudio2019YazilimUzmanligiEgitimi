@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "New";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+@model List<SelectListItem>
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+        $("#btnSave").click(function () {
+            var vm =
+            {
+                ProductName: $("#txtProductName").val(),
+                Price: $("#txtPrice").val(),
+                Discount: $("#txtDiscount").val(),
+                CategoryId: $("#ddlCategories").val(),
+                ShortDescription: $("#txtShortdescription").val()
+            };
+
+            $.ajax({
+                url: "new-product",
+                method: "post",
+                dataType: "json",
+                data: { vm: vm },
+                success: function (response) {
+                    if (response.isOk) {
+
+                        var formData = new FormData();
+                        var files = $("#fuPhoto")[0].files;//Kullanıcının seçmiş olduğu dosya
+                        $.each(files, function (i, file) {
+                            formData.append("image[]", file);
+                        });
+                        formData.append("prdId", response.productId);
+
+                        $.ajax({
+                            url: "/product-photo-upload",
+                            method: "post",
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                            success: function (resp) {
+                                if (resp.isOk) {
+                                    window.location.href = "/products";
+                                }
+                                else
+                                    alert("Ürün Kadedilemedi");
+                            }
+                        });
+
+                        
+                    }
+                }
+            });
+        });
+    });
+
+</script>
+}
+
+<div class="col-md-12">
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Yeni Ürün Kayıt Formu</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Ürün Adı</label>
+                    <input type="text" class="form-control" id="txtProductName" placeholder="Ürün Adı Giriniz">
+                </div>
+                <div class="form-group">
+                    <label>Fiyat</label>
+                    <input type="text" class="form-control" id="txtPrice" placeholder="Fiyatı Giriniz">
+                </div>
+                <div class="form-group">
+                    <label>İndirim</label>
+                    <input type="text" class="form-control" id="txtDiscount" placeholder="İndirim Giriniz">
+                </div>
+                <div class="form-group">
+                    <label>Ürün Açıklaması</label>
+                    <textarea id="txtShortdescription" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Kategorisi</label>
+                    <select id="ddlCategories" class="form-control" asp-items="Model"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fotoğraflar</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fuPhoto" multiple>
+                            <label class="custom-file-label" >Fotoğraf Seç</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button id="btnSave" type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JAVASCRIPT</title>
+    <style>
+        .divStil {
+            border: 1px solid black;
+            background-color: red;
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" onclick="ManipuleEt()">Çalıştır</button>
+    <hr>
+    <div id="div1">DİV 1</div>
+    <hr>
+
+    <div>DİV 2</div>
+    <div class="x">DİV 3</div>
+    <div>DİV 4</div>
+    <div class="x">DİV 5</div>
+
+    <br>
+    <hr>
+
+    <input type="radio" name="takim">Fenerbahçe <br>
+    <input type="radio" name="takim">Galatasaray <br>
+    <input type="radio" name="takim">Beşiktaş <br>
+
+    <br>
+
+    <input type="radio" name="cinsiyet">Kdın <br>
+    <input type="radio" name="cinsiyet">Erkek <br>
+
+    <hr>
+
+    <p>Bu bir p etiketi içerisindeki içeriktir.</p>
+    <p class="x">Bu bir p etiketi içerisindeki içeriktir.</p>
+    <p>Bu bir p etiketi içerisindeki içeriktir.</p>
+    <p class="x">Bu bir p etiketi içerisindeki içeriktir.</p>
+
+    <hr>
+
+    <div id="divPTututcu" style="border:1px solid black; height: 50px;background-color: red; color:white ;"></div>
+
+
+    <hr>
+
+    <div id="divDeneme">
+        <p id="p1">Burası P 1</p>
+        <p id="p2">Burası P 2</p>
+        <h1>Burası Başlık</h1>
+    </div>
+
+    <script>
+        //DOM (Document Object Model)
+
+        // var div1 = document.getElementById("div1");
+        // div1.innerHTML = "<b>DİV 1 DEĞİŞTİ </b>";
+        // div1.style.color = "red";
+
+        //-----------------------------------------------------
+
+        // var divler = document.getElementsByClassName("x");
+        // for (var i = 0; i < divler.length; i++) {
+        //     divler[i].style.border = "2px solid black";
+        // }
+
+        //-----------------------------------------------------
+
+        // var radioButonlar = document.getElementsByName("takim");
+
+        //-------------------------------------------------------
+
+        // function ManipuleEt() {
+        //     var divler = document.getElementsByTagName("div");
+
+        //     for (var i = 0; i < divler.length; i++) {
+        //         var div = divler[i];
+        //         div.innerHTML = "<b>Manipüle edildi </b>";
+        //         div.style.border = "1px solid black";
+        //         div.style.background = "red";
+        //         div.style.color = "white";
+        //         div.style.marginBottom = "10px";
+        //     }
+        // }
+
+        //----------------------------------------------------------
+
+        //var sonuc= document.querySelectorAll("p.x");
+
+        //----------------------------------------------------------
+
+        // function ManipuleEt() {
+        //     var divler = document.getElementsByTagName("div");
+
+        //     for (var i = 0; i < divler.length; i++) {
+        //         var div = divler[i];
+        //         div.innerHTML = "<b>Manipüle edildi </b>";
+
+        //         div.className="divStil";
+        //     }
+        // }
+        //----------------------------------------------------------
+
+        // var div1=document.getElementById("div1");
+        // div1.innerText="<b>Manipule edildi</b>";
+
+        //----------------------------------------------------------
+
+        // var olusturulanP = document.createElement("p");
+        // var node = document.createTextNode("Dinamik olarak eklenen p nin içeriği");
+
+        // olusturulanP.appendChild(node);
+
+        // var divPTututcu = document.getElementById("divPTututcu");
+
+        // divPTututcu.appendChild(olusturulanP);
+        //<p>Dinamik olarak eklenen p nin içeriği</p>
+
+        //----------------------------------------------------------
+
+        // var p1=document.getElementById("p1");
+        // p1.remove();
+
+        //----------------------------------------------------------
+
+        // var olusturulanP = document.createElement("p");
+        // var node = document.createTextNode("Dinamik olarak eklenen p nin içeriği");
+        // olusturulanP.appendChild(node);
+
+        // var divDeneme = document.getElementById("divDeneme");
+        // var p2 = document.getElementById("p2");
+
+        // divDeneme.insertBefore(olusturulanP,p2);
+
+        //----------------------------------------------------------
+
+        // var divDeneme = document.getElementById("divDeneme");
+        // var childNodes = divDeneme.childNodes;
+
+        //----------------------------------------------------------
+
+         var p2 = document.getElementById("p2");
+         var prnt = p2.parentNode;
+        
+      
+
+
+
+    </script>
+</body>
+
+</html>

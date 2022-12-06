@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfXamlStoryBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXamlStoryBoard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360.427" Width="536.611">
+
+    <Window.Resources>
+        <Storyboard x:Key="sbHareket">
+            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)"
+                             To="400" Duration="0:0:5" />
+            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)"
+                             To="250" Duration="0:0:5"/>
+            <ColorAnimation Storyboard.TargetProperty="(Border.Background).Color"
+                            To="Orange" Duration="0:0:5"/>
+            <ThicknessAnimation Storyboard.TargetProperty="Padding"
+                                To="15" Duration="0:0:5"/>
+            <DoubleAnimation Storyboard.TargetProperty="FontSize" 
+                             Storyboard.TargetName="txtMesaj"
+                             To="20" Duration="0:0:5"/>
+
+        </Storyboard>
+    </Window.Resources>
+
+
+    <Canvas>
+        <Border x:Name="border" CornerRadius="10" Canvas.Left="0" Canvas.Top="0" Padding="5" 
+                Background="Lime">
+            <TextBlock Text="Metin" x:Name="txtMesaj"/>
+        </Border>
+
+        <Button x:Name="btnBaslat" Content="Başlat" Padding="10" Canvas.Left="23" Canvas.Top="281"
+                Click="Button_Click"/>
+
+        <Button Content="Duraklat" Padding="10" x:Name="btnDuraklat" 
+                RenderTransformOrigin="1.776,7.817" 
+                Canvas.Left="101" Canvas.Top="281"
+                Click="btnDuraklat_Click"/>
+
+        <Button Content="Devam Et" Padding="10"  x:Name="btnDevam"
+                Click="btnDevam_Click" Canvas.Left="191" Canvas.Top="281"/>
+
+    </Canvas>
+</Window>

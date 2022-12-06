@@ -1,0 +1,12 @@
+﻿@model List<Category>
+
+<table class="table table-bordered">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="#">@item.CategoryName</a>
+            </td>
+        </tr>
+    }
+</table>

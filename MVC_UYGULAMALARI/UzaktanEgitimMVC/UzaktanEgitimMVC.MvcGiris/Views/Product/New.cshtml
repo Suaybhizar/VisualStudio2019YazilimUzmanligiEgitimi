@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "New";
+}
+
+<h1>Yeni Ürün Ekleme Formu</h1>
+
+<hr />
+
+<form action="/product/New" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Ürün Adı</label>
+        <input name="ProductName" type="text" class="form-control" id="txtProductName">
+    </div>
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Ürün Id</label>
+        <input name="ProductID" type="text" class="form-control" id="txtProductId">
+    </div>
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">Fiyat</label>
+        <input name="UnitPrice" type="text" class="form-control" id="txtUnitPrice">
+    </div>
+
+
+    <div class="col-md-12">
+        <label for="inputState" class="form-label">Kategoriler</label>
+        <select name="CategoryID" id="ddlCategories" class="form-select">
+            <option selected>Kategori Seçiniz...</option>
+            <option value="1">Meyveler</option>
+            <option value="2">İçecekler</option>
+        </select>
+    </div>
+
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
+
+@Html.Raw(ViewData["message"])
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="divTest">Burada div içeriği mevcuttur</div>
+
+    <button type="button">TEXT HTML</button>
+
+    <hr>
+
+    <input id="txt" type="text" placeholder="Adınızı Giriniz">
+    <button type="button">VAL</button>
+
+    <hr>
+
+    <a href="#" target="_blank">LINK</a>
+    <input id="btnTest" type="button" value="TEST">
+    <button type="button">ATTR</button>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                //textin içine bir değer vermezsen get olarak döner eğer textin içerisime değer verirsen set yapmış olursun
+                //    var content= $("#divTest").text(); 
+                //    alert(content);
+
+                // var content = $("#divTest").html();
+                // alert(content);
+
+                // $("#divTest").text("<b>Text metodu ile setlendi</b>"); 
+
+                // $("#divTest").html("<b> HTML metodu ile setlendi </b>"); 
+
+                //----------------------------------------------------------------------------
+
+                //    var value= $("#txt").val();
+                //    alert(value);
+
+                // $("#txt").val("Ali Veli");
+
+                //----------------------------------------------------------------------------
+
+            //    var result= $("a[href='#']").attr("target");
+            //    alert(result);
+
+            //$("#btnTest").attr("type","text");
+
+            //-----------------------------------------------------------------------------------
+
+            //append, prepend, after, before
+
+            
+
+            });
+        });
+    </script>
+</body>
+
+</html>

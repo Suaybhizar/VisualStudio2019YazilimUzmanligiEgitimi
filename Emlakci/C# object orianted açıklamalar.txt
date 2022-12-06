@@ -1,0 +1,111 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmlakciLib
+{
+    public class Ev
+    {
+        //sınıfa ait bilgileri saklayan veri alanları
+        //sınıfın içinde tanımlanan değişkenlere field denir.
+        //sınıfa ait işleri gerçekleştiren metodlar.
+
+        //CTRL+R+E
+        //fields
+        private int katno;
+        private int odasayisi;
+        private string semt;
+        private double alan;
+
+        //katnoyu kapsülleyen bir property
+        public int Katno 
+        {
+            get //KatnoGetir
+            {
+                return katno;
+            }
+            set //KatnoDegistir 
+            {
+                katno = value;//value ifadesi kullanıcının gönderdiği değeri ifade eder.
+            }
+        }
+
+        public int Odasayisi
+        {
+            get { return odasayisi; }
+            set { odasayisi = Math.Abs(value); }
+        }
+
+        public string Semt
+        {
+            get { return semt; }
+            set { semt = value.Trim().ToUpper(); }//Trim boşlukları kırp ve daha sonra  ToUpper ile tamamını büyük harf yap. 
+        }
+
+        public double Alan
+        {
+            get { return alan; }
+            set { alan = Math.Abs(value); }
+        }
+
+        public DateTime TarihGetir
+        {
+            //readonly property
+            get
+            {
+                return DateTime.Now;//Şuanın tarihini döndür.
+            }
+        }
+
+        /*
+        //getter(deger öğrenmek için yazılan metodlar)
+        public int OdaSayisiGetir()
+        {
+            return odasayisi;
+        }
+        public int KatnoGetir()
+        {
+            return katno;
+        }
+        public string SemtGetir()
+        {
+            return semt;
+        }
+        public double AlanGetir()
+        {
+            return alan;
+        }
+
+        //setter(deger değiştirmek için yazılan metodlar)
+        public void OdasayisiDegistir(int odasayisi)
+        {
+            this.odasayisi = Math.Abs(odasayisi);
+             
+        }
+        public void KatnoDegistir(int katno)
+        {
+            this.katno = katno;
+        }
+        public void SemtDegistir(string semt)
+        {
+            this.semt = semt.Trim().ToUpper();//buradaki semt bilgisi büyük harflerle yazılır
+
+        }
+        public void AlanDegistir(double alan)
+        {
+            this.alan = Math.Abs(alan);//Math.Abs metodu mutlak değer alır
+        }
+        */
+
+        //methods
+        public string EvBilgileriniGetir()
+        {
+            //return "Oda Sayısı : " + odasayisi + "\nKat No :" + katno + "\nSemt :" + semt + "\nAlanı :" + alan;
+
+            return string.Format("Oda sayısı : {0}\n Kat No : {1}\n Semt : {2}\n Alan : {3}", Odasayisi, Katno, Semt, Alan);
+
+        }
+    }
+}

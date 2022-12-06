@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmlakciLib
+{
+    public abstract class Ev
+    {
+
+        #region Fields
+        private int katno;
+        private int odasayisi;
+        private string semt;
+        private double alan;
+        #endregion
+
+        #region Constructors
+        //Constructor Overloading
+        public Ev(int odasayisi, int katno, string semt, double alan)
+        {
+            Odasayisi = odasayisi;
+            Katno = katno;
+            Semt = semt;
+            Alan = alan;
+        }
+
+        public Ev() { }
+
+        #endregion
+
+        #region Properties
+        public int Katno
+        {
+            get //KatnoGetir
+            {
+                return katno;
+            }
+            set //KatnoDegistir 
+            {
+                katno = value;//value ifadesi kullanıcının gönderdiği değeri ifade eder.
+            }
+        }
+
+        public int Odasayisi
+        {
+            get { return odasayisi; }
+            set { odasayisi = Math.Abs(value); }
+        }
+
+        public string Semt
+        {
+            get { return semt; }
+            set { semt = value.Trim().ToUpper(); }//Trim boşlukları kırp ve daha sonra  ToUpper ile tamamını büyük harf yap. 
+        }
+
+        public double Alan
+        {
+            get { return alan; }
+            set { alan = Math.Abs(value); }
+        }
+
+        public DateTime TarihGetir
+        {
+            //readonly property
+            get
+            {
+                return DateTime.Now;//Şuanın tarihini döndür.
+            }
+        }
+        #endregion
+
+        #region Methods
+        public abstract string EvBilgileriniGetir();
+        #endregion
+
+        public abstract string EvTipi { get; }
+    }
+}

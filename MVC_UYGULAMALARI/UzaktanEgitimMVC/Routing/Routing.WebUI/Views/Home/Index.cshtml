@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Routing.WebUI.Models.ViewModels
+@using Routing.WebUI.Helpers
+@model IndexVm
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-bordered">
+            @foreach (var item in Model.Categories)
+            {
+                <tr>
+                    <td>
+                        <a href="/urunler-@(MvcHelper.UrlHelper(item.CategoryName))/@item.CategoryID">@item.CategoryName</a>
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </div>
+    <div class="col-md-8">
+        @if (Model.Products != null && Model.Products.Count > 0)
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Ürün Adı</th>
+                        <th>Fiyatı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Products)
+                    {
+                        <tr>
+                            <td>@item.ProductID</td>
+                            <td>@item.ProductName</td>
+                            <td>@item.UnitPrice</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

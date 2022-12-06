@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .deneme{
+            background-color: blue!important;
+            width: 75%;
+            margin: auto;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--append (seçlen elementin en sonuna eklemek için kullanılır)-->
+    <!--prepend (seçilen elementin en başına eklemek için kullanılır)-->
+    <!--after (seçilen elementden hemen sonta eklemek için kullanılır)-->
+    <!--before (seçilen elemenden hemen önce eklemek için kullanılır)-->
+    <!--remove (elementi ve ona ait tüm child elementleri siler)-->
+    <!--empty (elementin child elementlerini siler)-->
+    <!--addClass-->
+    <!--removeClass-->
+    <!--css-->
+
+
+    <!-- <div id="div1" class="deneme" style="background-color: yellow; height:100px ;"> class en baştan eklenmiş ve kaldırmak istiyorsak removeClass kullanılır -->
+    <div id="div1" style="background-color: yellow; height:100px ;">
+        <p id="p1">1. P İÇERİĞİ</p>
+        <p id="p2">2. P İÇERİĞİ</p>
+        <p id="p3">3. P İÇERİĞİ</p>
+    </div>
+
+    <button id="btnTest">TEST</button>
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btnTest").click(function () {
+                // $("#div1").append("<p>EN SON EKLENEN P </p>");
+                // $("#div1").prepend("<p>EN SON EKLENEN P </p>");
+                // $("#div1").after("<p>EN SON EKLENEN P </p>");
+                // $("#div1").before("<p>EN SON EKLENEN P </p>");
+                //-----------------------------------------------------
+
+                // $("#div1").remove();
+                // $("#div1").empty();
+
+                //-----------------------------------------------------
+
+                //$("#div1").addClass("deneme");
+                //$("#div1").removeClass("deneme");
+                
+                $("#div1").css({
+                    "width":"500px",
+                    "font-size":"30px",
+                    "color":"red"
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>

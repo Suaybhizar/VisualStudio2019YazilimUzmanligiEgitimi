@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfElementBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfElementBinding"
+        mc:Ignorable="d"
+        x:Name="window"
+        Title="MainWindow" Height="222.867" Width="275.355">
+    <StackPanel Margin="10" x:Name="stackAnaTasıyici">
+        <TextBox x:Name="txtMetin" Margin="10"/>
+        <TextBox Margin="10" Text="{Binding ElementName=txtMetin,Path=Text,
+            Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+
+        <Button Content="{Binding ElementName=txtMetin,Path=Text,
+            UpdateSourceTrigger=PropertyChanged}"
+                Margin="{Binding ElementName=txtMetin,Path=Margin}"/>
+        
+        
+        <TextBox Text="{Binding ElementName=window,Path=Title,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBox Text="{Binding Titlei,UpdateSourceTrigger=PropertyChanged}"/>
+
+    </StackPanel>
+</Window>

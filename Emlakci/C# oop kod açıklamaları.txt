@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EmlakciLib;
+
+namespace EmlakciApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Ev evim = new Ev();
+            evim.Alan = 100;
+            evim.Katno = 5;
+            evim.Odasayisi = -4;
+            evim.Semt = "BALGAT";
+
+            Ev evim2 = new Ev();
+            evim2.Alan = 110;
+            evim2.Katno = 3;
+            evim2.Odasayisi = 3;
+            evim2.Semt = "balgat";
+
+
+            Console.WriteLine("Evime oda sayısı değeri");
+            Console.WriteLine("------------------");
+            Console.WriteLine(evim.Odasayisi);
+            Console.WriteLine("<---------------------->");
+
+            Console.WriteLine("Evim2'ye ait bilgiler");
+            Console.WriteLine("------------------");
+            Console.WriteLine(evim.EvBilgileriniGetir());
+
+            Console.WriteLine();
+            Console.WriteLine(evim2.TarihGetir);
+
+            Console.ReadKey();
+        }
+    }
+}

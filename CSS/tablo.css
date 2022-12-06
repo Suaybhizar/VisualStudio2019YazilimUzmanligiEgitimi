@@ -1,0 +1,62 @@
+#divMain{
+    width: 800px;
+    margin: auto;
+    background-color: cornsilk;
+    margin-top: 30px;
+}
+
+#tbl{
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+#tbl th{
+    background-color: darkcyan;
+    color: floralwhite;
+}
+
+#tbl th,td{
+    border: 1px solid black;
+    padding: 10px;
+
+ 
+}
+
+#tbl tr{
+    height: 55px;
+}
+#tbl tr:nth-child(odd){
+    background-color: #eee;
+
+}
+#tbl tr:nth-child(even){
+    background-color: #ccc;
+
+}
+
+/*#tbl tr:nth-child(2){
+     font-size: 30px;
+}*/
+/*#tbl tr:nth-last-child(2){
+    font-size: 30px;
+}
+*/
+
+#tbl tr:hover{
+    background-color: red;
+    color: white;
+    font-size: 18px;
+}
+
+a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 15px;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/* PSEUDO CLASS */

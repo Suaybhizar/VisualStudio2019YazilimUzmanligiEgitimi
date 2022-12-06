@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfTemelleri.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTemelleri"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="124,138,0,0" VerticalAlignment="Top" Width="116" Background="#FF857575"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="124,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="116"/>
+
+    </Grid>
+</Window>

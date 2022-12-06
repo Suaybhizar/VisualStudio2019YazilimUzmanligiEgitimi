@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    background-color: #333;
+    
+}
+
+#divOrtalaHeader {
+    width: 75%;
+    height: 150px;
+    margin: auto;
+    
+}
+
+#solBolum {
+    width: 30%;
+    height: 120px;
+    float: left;
+    padding-top: 45px;
+   
+}
+
+#solBolum h1 {
+    color: wheat;
+    font-size: 35px;
+    margin: 0;
+   
+}
+
+#solBolum p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 2px;
+}
+
+#solBolum a {
+    color: wheat;
+    text-decoration: none;
+}
+
+#sagBolum {
+    width: 70%;
+    height: 120px;
+    float: left;
+}
+
+nav {
+    float: right;
+    padding-top: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    padding: 15px;
+    background-color: #232323;
+
+}
+
+nav ul a {
+    font-size: 20px;
+    text-decoration: none;
+    color: wheat;
+}
+
+nav ul :hover {
+    color: crimson;
+    text-decoration: underline;
+}
+
+/* -------------------------------- */
+
+main {
+    width: 100%;
+    height: auto
+}
+
+#divOrtalaMain {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    
+}
+
+#section1 {
+    width: 100%;
+    height: 250px;
+    background-color: #333;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 60px;
+    
+}
+
+#section1 h1 {
+    margin: 0;
+    color: wheat;
+    font-size: 30px;
+}
+
+#section2 {
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+}
+
+.kutu {
+    width: 33%;
+    height: auto;
+    background-color: #333;
+    float: left;
+    padding: 10px;
+    margin-right: 6px;
+}
+
+.divCerceve {
+    border: 2px solid #232323;
+    width: 100%;
+    height: 120px;
+}
+
+.resim {
+    width: 100%;
+    height: 115px;
+    background-color: #ccc;
+
+}
+
+.resim h1 {
+    color: #232323;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+}
+
+.kutu h4 {
+    font-size: 20px;
+    color: white;
+}
+
+.kutu p {
+    line-height: 20px;
+    color: white;
+    text-align: justify;
+}
+
+.link {
+    float: right;
+    color: crimson;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+#section3 {
+    width: 100%;
+    height: 300px;
+}
+
+#bolum1 {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+#bolum2 {
+    width: 50%;
+    height: auto;
+    float: left;
+    background-color: #333;
+    padding-top: 60px;
+    margin-top: 10px;
+
+}
+
+#bolum2 h1 {
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #333;
+    margin-top: 10px;
+}
+
+/*------------------Eğitim dışı yapılmıştır------------------------*/
+#divIcon{
+    height: 100px;
+    width: 100px;
+    background-color: wheat;
+    border-radius: 50px;
+    opacity: 0.5;
+    margin-top: 10px;
+    float: right;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+
+   
+}

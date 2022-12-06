@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMLAR</title>
+    </head>
+    <body>
+        <form action="FormDegerlendir.html" method="post">
+            <table>
+                <tr>
+                <td>Adı</td>
+                <td> : </td>
+                <td>
+                    <input name="adi" type="text" value="" placeholder="Adınız" required maxlength="6"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Soyadı</td>
+                <td> : </td>
+                <td>
+                    <input name="soyadi" type="text" value="" placeholder="Soyadınız"/>
+                </td>
+            </tr>
+            <tr>
+                <td>E-posta</td>
+                <td> : </td>
+                <td>
+                    <input name="eposta" type="email" value="" placeholder="E-posta Adresiniz" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Web Site Adresi</td>
+                <td> : </td>
+                <td>
+                    <input name="url" type="url" value="" placeholder="Web Siteniz" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Yaşınız</td>
+                <td> : </td>
+                <td>
+                    <input name="yas" type="number" min="5" max="20"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Şehir</td>
+                <td> : </td>
+                <td>
+                   <select>
+                       <option >Seçiniz...</option>
+                       <option>Ankara</option>
+                       <option>İstanbul</option>
+                       <option selected>İzmir</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fotoğraf</td>
+                <td> : </td>
+                <td>
+                    <input type="file" />
+                </td>
+            </tr>
+            <tr>
+                <td>Hobileriniz</td>
+                <td> : </td>
+                <td>
+                    <table>
+                        <tr>
+                           <td><input type="checkbox"/></td>
+                           <td>Kitap Okumak</td>
+                            
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"/></td>
+                                <td>Spor Yapmak</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"/></td>
+                                <td>Seyehat Etmek</td>
+                        </tr>
+                    </table>
+
+                   
+                </td>
+            </tr>
+            <tr>
+                <td>Cinsiyet</td>
+                <td> : </td>
+                <td>
+                  <table>
+                      <tr>
+                          <td> <input type="radio" name="cinsiyet"/></td>
+                          <td>Kadın</td>
+                      </tr>
+                      <tr>
+                        <td> <input type="radio" name="cinsiyet"/></td>
+                        <td>Erkek</td>
+                    </tr>
+                  </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Favori Takımınız</td>
+                <td> : </td>
+                <td>
+                  <table>
+                      <tr>
+                          <td> <input type="radio" name="takim"/></td>
+                          <td>Fenerbahçe</td>
+                      </tr>
+                      <tr>
+                        <td> <input type="radio" name="takim"/></td>
+                        <td>Galatasaray</td>
+                    </tr>
+                  </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" value="KAYDET"/>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        #pTest {
+            background-color: red;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="pTest">P içerisn deki içerik</p>
+
+    <hr>
+
+    <input id="txt" type="text">
+
+    <input id="btnGizle" type="button" value="GİZLE">
+
+    <input id="btnGoster" type="button" value="GÖSTER">
+
+    <input id="btnToggle" type="button" value="TOGGLE">
+
+    <hr>
+
+    <input id="btnFadeIn" type="button" value="FADE IN">
+    <input id="btnFadeOut" type="button" value="FADE OUT">
+    <input id="btnFadeToggle" type="button" value="FADE TOGGLE">
+
+    <br>
+    <input id="btnSlideDown" type="button" value="SLİDE DOWN">
+    <input id="btnSlideUp" type="button" value="SLİDE UP">
+    <input id="btnSlide" type="button" value="SLİDE">
+
+    <br>
+
+    <div id="divContent" style="display: none;background-color: red;width: 400px; height:100px;">
+        İÇERİK
+    </div>
+
+    <br>
+    <hr>
+
+    <input id="btnAnimate" type="button" value="ANIMATE">
+
+    <p id="pTest2" style="position: absolute; background-color: red; width: 50%; ">P içerisn deki içerik</p>
+
+
+
+
+
+
+
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            // $("#pTest").click(function () {
+
+            //     alert("p ye tıklandı");
+            // });
+
+            // $("#pTest").mouseenter(function () {
+
+            //     alert("p ye fare ile gelindi");
+            // });
+
+            // $("#pTest").mouseleave(function () {
+
+            //     alert("p den  fare ile ayrıldı");
+            // });
+
+            //-----------------------------------------------------------
+
+            // $("#pTest").on("ckick",function(){
+            //     alert("p ye tıklandı");
+            // });
+
+            // $("#pTest").on("mouseenter",function(){
+            //     alert("p ye fare ile gelindi");
+            // });
+
+            // $("#pTest").on("mouseleave",function(){
+            //     alert("p den  fare ile ayrıldı");
+            // });
+
+            //---------------------------------------------
+            //--------------------hatırlatma---------------
+            // var obj = {
+            //     Adi: "ali",
+            //     SoyAdi: "veli",
+            //     SelamVer: function () { }
+            // }
+            //---------------------------------------------
+
+            // $("#pTest").on({
+            //     click: function () {
+            //         alert("p ye tıklandı")
+
+            //     },
+            //     mouseenter: function () {
+            //         alert("Mouse enter")
+            //     },
+            //     mouseleave: function () {
+            //         alert("Mouse leave")
+            //     }
+
+            // });
+
+            $("#txt").keydown(function (evt) {
+                alert(evt.which);
+            });
+
+            $("#btnGizle").click(function () {
+                $("#txt").hide();
+            });
+
+            $("#btnToggle").click(function () {
+                $("#txt").toggle();
+            });
+
+            $("#btnFadeIn").click(function () {
+                $("#divContent").fadeIn("slow");
+            });
+            $("#btnFadeOut").click(function () {
+                $("#divContent").fadeOut(3000);
+            });
+            $("#btnFadeToggle").click(function () {
+                $("#divContent").fadeToggle(5000);
+            });
+
+
+            $("#btnSlideDown").click(function () {
+                $("#divContent").slideDown();
+            });
+            $("#btnSlideUp").click(function () {
+                $("#divContent").slideUp();
+            });
+            $("#btnSlide").click(function () {
+                $("#divContent").slideToggle(3000);
+            });
+
+            $("#btnAnimate").click(function () {
+                $("#pTest2").animate({
+                    "left": "250px",
+                    "height": "300px",
+                    "font-size": "45px",
+                }, 3000);
+            });
+        });
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

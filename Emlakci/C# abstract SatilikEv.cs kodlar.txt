@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmlakciLib
+{
+    public class SatilikEv : Ev
+    {
+        //Fields
+        double fiyat;
+
+        //Constructors
+        public SatilikEv(int odasayisi, int katno, string semt, double alan, double fiyat)
+            : base(odasayisi, katno, semt, alan)
+        {
+            Fiyat = fiyat;
+        }
+        public SatilikEv() : base()
+        {
+
+        }
+
+        //Properties
+        public double Fiyat
+        {
+            get { return fiyat; }
+            set { fiyat = Math.Abs(value); }
+        }
+
+        public override string EvTipi
+        {
+            get
+            {
+                return "Satılık Ev";
+            }
+        }
+
+        //Methods
+        public override string EvBilgileriniGetir()
+        {
+            return string.Format("Oda sayısı : {0}\nKat No : {1}\nSemt : {2}\nAlan : {3}" +
+                    "\nFiyat :{4}", Odasayisi, Katno, Semt, Alan, Fiyat);
+        }
+
+
+
+
+    }
+}

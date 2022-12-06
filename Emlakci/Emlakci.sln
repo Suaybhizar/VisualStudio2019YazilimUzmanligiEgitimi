@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmlakciLib", "EmlakciLib\EmlakciLib.csproj", "{46DE7CA4-AD0F-43DE-A7A7-F1AD1148F909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmlakciApp", "EmlakciApp\EmlakciApp.csproj", "{C93CAC86-AF4A-4D61-A3BF-B1EBC9C1B011}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46DE7CA4-AD0F-43DE-A7A7-F1AD1148F909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DE7CA4-AD0F-43DE-A7A7-F1AD1148F909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DE7CA4-AD0F-43DE-A7A7-F1AD1148F909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DE7CA4-AD0F-43DE-A7A7-F1AD1148F909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93CAC86-AF4A-4D61-A3BF-B1EBC9C1B011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93CAC86-AF4A-4D61-A3BF-B1EBC9C1B011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93CAC86-AF4A-4D61-A3BF-B1EBC9C1B011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93CAC86-AF4A-4D61-A3BF-B1EBC9C1B011}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21BA5365-C7AA-4A4F-8DC9-0A768647D410}
+	EndGlobalSection
+EndGlobal

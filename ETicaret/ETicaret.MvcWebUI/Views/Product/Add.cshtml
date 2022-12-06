@@ -1,0 +1,52 @@
+﻿@using ETicaret.Model.Entities
+@model List<Category>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/Product/Add" method="post">
+                <table class="table">
+                    <tr>
+                        <td>Ürün Adı</td>
+                        <td> : </td>
+                        <td>
+                            <input type="text" name="ProductName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ürün Fiyatı</td>
+                        <td> : </td>
+                        <td>
+                            <input type="text" name="UnitPrice" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ürün Stok</td>
+                        <td> : </td>
+                        <td>
+                            <input type="text" name="UnitsInStock" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ürün Kategorisi</td>
+                        <td> : </td>
+                        <td>
+                            <select name="CategoryId">
+                                @foreach (Category category in Model)
+                                {
+                                    <option value="@category.CategoryID">@category.CategoryName</option>
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="Kaydet" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            @ViewBag.Message
+        </div>
+    </div>
+</div>

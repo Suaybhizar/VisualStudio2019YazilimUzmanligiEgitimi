@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmlakciLib
+{
+    
+    //her kiralık ev bir ev midir? evet
+    //her kiralık ev bir satılık ev midir? hayır
+    public class KiralikEv :Ev
+    {
+        //Fiealds
+        double depozito;
+        double kira;
+
+        //Constructors
+        public KiralikEv(int odasayisi,int katno,string semt,double alan,
+            double depozito,double kira) :base(odasayisi,katno,semt,alan)
+        {
+
+           
+            this.Depozito = depozito;
+            this.Kira = kira;
+
+        }
+        public KiralikEv():base()
+        {
+
+        }
+
+        //Properties
+        public double Depozito
+        {
+            get { return depozito; }
+            set { depozito = Math.Abs(value); }
+        }
+
+        public double Kira
+        {
+            get { return kira; }
+            set { kira = Math.Abs(value); }
+        }
+
+        //Methods
+
+        //Name Hiding  İsim Gizleme
+        public override string EvBilgileriniGetir()
+        {
+            return base.EvBilgileriniGetir()+string.Format("\nDepozito :{0}\nKira :{1}",Depozito,Kira);
+        }
+    }
+}

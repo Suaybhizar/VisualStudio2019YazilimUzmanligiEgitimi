@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEÇİCİLER</title>
+        <style>
+            .sagaHizali{
+                text-align: right;
+                color: darkorange;
+            }
+
+            #cerceveli{
+                border: 1px solid black;
+                color: blue;
+            }
+
+            p{
+                color: red;
+                width: 800px;
+            }
+            
+            a{
+                font-size: 30px;
+                color: crimson;
+                padding: 10px;
+            }
+            input[type="text"]{
+                background-color: blue;
+            }
+            p span{
+                text-decoration: underline;
+            }
+            p.sagaHizali {
+                color: aqua;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!--1. ETİKET SEÇİCİSİ-->
+        <!--2. ID SEÇİCİSİ-->
+        <!--3. Class Seçicisi-->
+        <!--4. Attribute seçicisi-->
+        <!--html etiketlerine id attribute u ile bir değer verilir ancak bu değer sadece bir element için geçerlidir.-->
+        <!--html etiketlerine class attribute u ile bir değer verilir bu değer birden fazla element için kullanılabilir-->
+
+<form>
+    <table>
+        <tr>
+            <td>Adı</td>
+            <td> : </td>
+            <td>
+                <input type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Soyadı</td>
+            <td> : </td>
+            <td>
+                <input type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td> : </td>
+            <td>
+                <input type="email"/>
+            </td>
+        </tr>
+         <tr>
+            
+            <td colspan="3"> 
+                <input type="submit"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+        <hr/>
+
+        <a class="sagaHizali" href="#">Anasayfa</a>
+        <a href="#">Hakkımızda</a>
+        <a href="#">İletişim</a>
+        <a href="#">Duyurular</a>
+
+<span>Bu span p içinde yer almayan bir sapnadir</span>
+        <p id="sagaHizali">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been <span> bu span p iöindeki bir spandir</span> a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+            of Lorem Ipsum.
+        </p>
+        <p id="cerceveli">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer <span> bu span p iöindeki bir spandir</span> into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+            of Lorem Ipsum.
+        </p>
+        <p class="sagaHizali">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+            of Lorem Ipsum.
+        </p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+            of Lorem Ipsum.
+        </p>
+        <p class="sagaHizali">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+            of Lorem Ipsum.
+        </p>
+    </body>
+</html>

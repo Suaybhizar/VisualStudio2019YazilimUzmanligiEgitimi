@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@model Product
+
+<h1>Ürün Silinecek !!!!</h1>
+
+<p>Aşağıda Bilgileri Bulunan Ürün Silinecektir </p>
+
+<p>@Model.ProductName</p>
+<p>@Model.UnitPrice</p>
+
+<form action="/Product/Delete" method="post">
+    <input type="hidden" name="ProductID" value="@Model.ProductID" />
+
+
+    <input type="submit" class="btn btn-primary" value="Sil" />
+</form>
+
+
+
+
